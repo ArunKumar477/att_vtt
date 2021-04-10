@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "in.SamsungCare.cr"
+        id        = "in.Samsung Care.cr"
         version   = "1.0.0">
 
     <name>Samsung Care </name>
@@ -10,7 +10,7 @@
         Samsung Care - Salesperson Tracker.
     </description>
 
-    <author href="www.att.vtt.im" email="arunkumar@vttech.in">
+    <author href="www.Samsung Care.in" email="arunkumar@vttech.in">
         Samsung Care
     </author>
 
@@ -61,12 +61,12 @@
     <preference name="android-windowSoftInputMode" value="stateHidden|adjustResize" />
 
 
-    <icon src="icon.png" />
-
+<!--     <icon src="icon.png" />
+ -->
     <gap:platform name="android" />
     <gap:platform name="ios" />
 
-    <gap:splash src="splash.png" />
+    <!--<gap:splash src="splash.png" />-->
     <platform name="android">
         <!-- you can use any density that exists in the Android project -->
         <splash src="res/screen/android/screen-hdpi-landscape.png" density="land-hdpi"/>
@@ -80,7 +80,7 @@
         <splash src="res/screen/android/screen-xhdpi-portrait.png" density="port-xhdpi"/>
     </platform>
 
-    <!-- <gap:plugin name="org.apache.cordova.file"/>
+    <!--<gap:plugin name="org.apache.cordova.file"/>
     <gap:plugin name="org.apache.cordova.file-transfer"/>
     <gap:plugin name="org.apache.cordova.dialogs"/>
     <gap:plugin name="org.apache.cordova.InAppBrowser"/>
@@ -90,7 +90,7 @@
     <gap:plugin name="cordova-plugin-network-information"/>
     <gap:plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" version="1.2.0" />
     <gap:plugin name="nl.x-services.plugins.toast" version="2.0" />
-    <gap:plugin name="cordova-plugin-x-toast" source="npm" /> -->
+    <gap:plugin name="cordova-plugin-x-toast" source="npm" />-->
 
     <plugin name="cordova-plugin-file" spec="~4.3.1" />
     <plugin name="cordova-plugin-file-transfer" spec="~1.6.1" />
