@@ -1,0 +1,8 @@
+[30-Sep-2019 15:20:31 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/modelwiseTarget.php on line 158
+[30-Sep-2019 15:20:33 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/modelwiseTarget.php on line 158
+[30-Sep-2019 15:20:36 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/modelwiseTarget.php on line 158
+[30-Sep-2019 15:20:44 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/modelwiseTarget.php on line 158
+[30-Sep-2019 16:22:52 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/modelwiseTarget.php on line 155
+[30-Sep-2019 16:22:55 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/modelwiseTarget.php on line 155
+[02-Dec-2019 11:32:23 UTC] PHP Parse error:  syntax error, unexpected 'result' (T_STRING), expecting ',' or ';' in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/smspassword.php on line 62
+[02-Dec-2019 11:33:12 UTC] PHP Parse error:  syntax error, unexpected 'result' (T_STRING), expecting ',' or ';' in /home4/veeteete/public_html/projectt/Salesplay_App_Source/projectT/php/smspassword.php on line 62

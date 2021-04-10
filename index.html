@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+<title>Samsung Care</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" type="text/css"/>
+
+<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<!-- <script src="cordova.js"></script>
+ --><link rel="stylesheet" href="css/style.css" type="text/css">
+<script defer src="js/fontawesome-all.js"></script>
+</head>
+<body>
+<div data-role="page" id="loginPage">
+  <div data-role="header" class="hedr" data-position="fixed">
+  		<table width="100%" height="50px" border='0'>
+        	<tbody>	
+                <tr>
+                    <td width="10%"></td>
+                    <td width="80%" class="headTxt"><img src="" style="height:35px;vertical-align: middle;" class="logoImg"><span class="cmpnyName"></span></td>
+                    <td width="10%"></td>
+                </tr>
+			</tbody>
+        </table>
+  </div>
+  <div data-role="content" data-theme="d" class="container">
+        <div id="loginPageDiv" style="padding-top:10%;">
+            <form id="loginPageFrm">
+                <div id="loginDiv">
+        			<p class="pHeadStyle">User login</p>
+                    <p class="loginPageLw" style="display:none;"></p>
+                    <input type="number" name="app_usr" id="app_usr" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="user name" style="text-align:center;">
+                    <input type="password" name="app_psw" id="app_psw" maxlength="10" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" placeholder="password" style="text-align:center;">
+                    <input type="button" value="Login" id="app_lgn_btn">
+                </div>
+  			</form>
+        </div>
+  </div>
+</div>
+
+<!-- home -->
+<div data-role="page" id="page_home">
+    <div data-role="header" class="hedr" data-position="fixed">
+        <table width="100%" height="50px" border='0'>
+            <tbody>	
+                <tr>
+                    <td width="10%" class="menuIcon cntr"><a href="#mypanel_home" class="menuLinkBtn"><i  class="fas fa-bars faIcon"></i></a></td>
+                    <td width="80%" class="headTxt"><img src="" style="height:35px;vertical-align: middle;" class="logoImg"><span class="cmpnyName"></span></td>
+                    <td width="10%" class="lgtDiv cntr"><i class="fas fa-ellipsis-v lgtClsIcon faIcon" id="lgtIcon"></i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  	<div data-role="panel" data-display="overlay" id="mypanel_home" data-theme="a" class="menuContent" style="margin-top: 52px;"></div><!-- /panel -->
+    <div class="overlayCls"></div>
+        <center><h4>HelloWorld</h4></center>
+</div>
+
+<div data-role="page" id="page1">
+  <div data-role="header" class="hedr" data-position="fixed">
+  		<table width="100%" height="50px" border='0'>
+        	<tbody>	
+                <tr>
+                    <!--<td width="10%" class="bckImg2 cntr"><i class="fas fa-arrow-left faIcon"></i> </td>-->
+                    <td width="10%" class="menuIcon cntr"><a href="#mypanel_addShop" class="menuLinkBtn" page_name="page1"><i  class="fas fa-bars faIcon"></i></a></td>
+                    <td width="80%" class="headTxt"><img src="" style="height:35px;vertical-align: middle;" class="logoImg"><span class="cmpnyName"></span></td>
+                    <td width="10%" class="rcntImg cntr"><i class="fas fa-ellipsis-v faIcon recIcon" id="RecentShops"></i></td>
+                </tr>
+			</tbody>
+        </table>
+  </div>
+  <div data-role="panel" data-display="overlay" id="mypanel_addShop" class="menuContent" style="margin-top: 52px;"></div>
+  <div class="overlayCls"></div>
+  <div data-role="content" data-theme="d" class="container">
+  		<div class="menu_shp" style="display:none;z-index: 99999;background: azure;position: relative;padding: 1px;">
+        	<p style="text-align:center;color:#ffbb33;">:: Recently Added Shops ::</p>
+        	<hr>
+            <ul class="menuUl"></ul>
+        </div>
+ 		<form id="addShop">
+            <p class="pHeadStyle">Add Shops</p>
+            <p class="addShpPage1w" style="display:none;"></p>
+            <p style="padding:10px;background:aliceblue;"><span>Lat : <span id="latP" style="color:green;"></span></span><br><span>Long : <span id="longP" style="color:green;"></span></span></p>
+
+            <input name="sname" type="text" class="txtBox" id="shopName" placeholder="Shop name"/>
+            <div id="srchShpList" style="width:100%;height:auto;background:white;border:1px solid gray;overflow:auto;display:none;"></div>
+            
+            <input name="saddr1" type="text" class="txtBox" id="shopAddr1" placeholder="Address1"/>
+            <input name="saddr2" type="text" class="txtBox" id="shopAddr2" placeholder="Address2"/>
+            <input name="sarea" type="text" class="txtBox" id="shopArea" placeholder="Shop area"/>
+            <div class="spinner"><img src="images/ajax-loader.gif"></div>
+            <input name="scity" type="text" class="txtBox" id="city" placeholder="city" value="Chennai" readonly/>
+            <input name="sstate" type="text" class="txtBox" id="state" placeholder="state" value="Tamilnadu" readonly/>
+            <input name="spincode" type="number" class="txtBox" id="pincode" placeholder="Pincode"/>
+            <input name="slatitude" type="hidden" id="slatitude" placeholder="latitude" readonly/>
+            <input name="slongitude" type="hidden" id="slongitude" placeholder="longitude" readonly/>
+            <input name="userId" type="hidden" id="userId">
+            <table width="100%">
+            <tr>
+            	<td width="100%"><input name="addShopDetails" id="addShopDetails" type="button" value="Save"/></td>
+            </tr>
+            </table>
+            <p id="demo"></p>
+        </form>
+  </div>
+</div>
+<!-- attendance -->
+<div data-role="page" id="page2">
+  <div data-role="header" class="hedr" data-position="fixed">
+    <table width="100%" height="50px" border='0'>
+        <tbody>	
+            <tr>
+                <td width="10%" class="menuIcon cntr"><a href="#mypanel_attendance" class="menuLinkBtn" page_name="page2"><i  class="fas fa-bars faIcon"></i></a></td>
+                <td width="80%" class="headTxt"><img src="" style="height:35px;vertical-align: middle;" class="logoImg"><span class="cmpnyName"></span></td>
+                <td width="10%" class="rcntImg cntr"><i class="fas fa-ellipsis-v faIcon recIcon" id="AtndsRecentIcon"></i></td>
+            </tr>
+        </tbody>
+    </table>
+  </div>
+	<div data-role="panel" data-display="overlay" id="mypanel_attendance" class="menuContent" style="margin-top: 52px;"></div>
+    <div class="overlayCls"></div>
+  <div data-role="content" data-theme="d" class="container">
+  		<div class="menu_attnds" style="display:none;z-index: 99999;background: azure;padding:1px;position:relative;">
+        	<p style="text-align:center;color:#ffbb33;">:: Shops Visited ::</p>
+        	<hr>
+            <ul class="menuUl_attnds"></ul>
+        </div>
+        <div id="homeDiv">
+        	<form id="homePageForm">
+                <p class="pHeadStyle" onclick="timer_entry()">Attendance</p>
+                <p class="attndsPage2w" style="display:none;"></p>
+                <div style="width:100%;height:60px;">
+                	<div style="width:100%;float:left;">
+
+                        <input type="text" style="text-align: center; font-size: 25px; font-weight: 15px;" readonly id="shop_name" name="shop_name">
+
+                        <center><h3><div id="showShopName"></div></h3></center>
+                        <span id="tryToHide">
+                        <select name="shpName" id="shpName">
+                            <option value="">Select Shop</option>
+                        </select>
+                        </span>
+                    </div>
+                    <div style="width:48%;float:right;display:none;">
+                    	<input type="hidden" id="shopAttendsTxt" name="shopAttendsTxt">
+                    	<input type="text" id="shopAttendsView" placeholder="shop name" style="padding:10px;">
+                    </div>
+                </div>
+<!--                 <div class="attndsWhy" style="height:50px;width:100%;background:white;border:1px solid gray;text-align: center;margin-top: 5px;">
+                	<table width="100%" height="50px">
+                        <tr>
+                            <td width="33%"><input type="radio" name="attndsRd" data-role="none" id="attndsRd_o" class="radioAttnds" value="Order" checked><label for="attndsRd_o" style="display:inline-block">Order</label></td>
+                            <td width="33%"><input type="radio" name="attndsRd" data-role="none" id="attndsRd_p" class="radioAttnds" value="Payment"><label for="attndsRd_p" style="display:inline-block">Payment</label></td>
+                             <td width="33%"><input type="radio" name="attndsRd" data-role="none" id="attndsRd_b" class="radioAttnds" value="Both"><label for="attndsRd_b" style="display:inline-block">Both</label></td>
+                        </tr>
+            		</table>
+                    <input type="hidden" id="attndsRdVal" name="attndsRdVal" value="Order"/>
+                </div> -->
+                <div width="100%" id="outstndsDiv" style="display:none;"></div>
+                <div id="srchAttndsList" style="width:100%;height:auto;background:white;border:1px solid gray;overflow:auto;display:none;"></div>
+                <div id="AddedAttndsDiv" style="width:100%;height:auto;background:white;border:1px solid gray;overflow:auto;display:none;"></div>
+                <input type="hidden" name="workerName" id="workerName" value="">
+                <input type="hidden" name="attndsLat" id="attndsLat" value="">
+                <input type="hidden" name="attndsLong" id="attndsLong" value="">
+       
+<!--                 <input name="attendance_btn" id="attendance_btn" type="button" value="Submit"/>
+ -->
+                <table  style="width:100%;">
+                    <th>
+                        <td><input name="checked_in" id="checked_in" type="button" value="checked in"/></td>
+                        <td><input name="checked_out" id="checked_out" type="button" value="checked out"/></td>
+                    </th>
+                </table>
+
+               <div style="display:none;"><input type="reset" id="rstBtn"></div>
+                <!-- popup start -->
+<!--                 <div id="PopupDiv_attendance" style="padding: 15px;height: 100px;background: white;">
+                    <p style="text-align: center;">Working Houre</p>
+                    <div id="total_time_value"></div>
+                </div> -->
+                    <center><h4><div id="clock_started"></div></h4></center>
+                    <center><h4><div style="height: '25px'; width: '25px'" id="fafaclock"></div></h4></center>
+                    <center><h4><div id="show_timer"></div></h4></center>
+                <div id="attendance_time" style="padding: 15px;height: 100px;background: white;">
+                    <div id="total_time_value"></div>
+                </div>
+                <!-- Popup end -->
+            </form>
+        </div>
+        <div class="alertDiv">
+        	<p style="font-weight:bold;text-align:center;padding-top:10px;">Already received . Want onemore time?</p>
+       		<div class="cnfrmBtnDiv"><span class="cnfrmBtn" id="cnfrmCncl">Cancel</span><span class="cnfrmBtn" id="cnfrmOk">Ok</span></div>
+        </div>
+  </div>
+</div>
+<!-- attn log -->
+<div data-role="page" id="page3">
+  <div data-role="header" class="hedr" data-position="fixed">
+        <table width="100%" height="50px" border='0'>
+            <tbody> 
+                <tr>
+                    <td width="10%" class="menuIcon cntr"><a href="#mypanel_order" class="menuLinkBtn" page_name="page3"><i  class="fas fa-bars faIcon"></i></a></td>
+                    <td width="80%" class="headTxt"><img src="" style="height:35px;vertical-align: middle;" class="logoImg"><span class="cmpnyName"></span></td>
+                    <td width="10%" class="rcntImg cntr"><i class="fas fa-ellipsis-v faIcon recOrderIcon" id="RecentOrdersIcon"></i></td>
+                </tr>
+            </tbody>
+        </table>
+  </div>
+    <div data-role="panel" data-display="overlay" id="mypanel_order" class="menuContent" style="margin-top: 52px;"></div>
+    <div class="overlayCls"></div>
+    <div data-role="content" data-theme="d" class="container">
+        <div id="homeDiv" style="padding-top:1%;">
+            <p class="pHeadStyle">Time Log's</p>
+                <from>
+                    <label for="birthday">From Date:</label>
+                    <input type="date" id="fromDate" name="fromDate" >
+                    <label for="birthday">To Date:</label>
+                    <input type="date" id="toDate" name="toDate">
+                    <br/>
+                    <input type="button" name="check_date" id="check_date" value="Submit">
+                </from>
+                <br/>
+            <div id="tableData"></div>
+        </div>
+    </div>
+</div>
+
+<!-- <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/main1.js"></script> -->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/script_menu.js"></script>
+<script type="text/javascript" src="js/script_geo_location.js"></script>
+<script>
+	$.mobile.allowCrossDomainPages = true;
+</script>
+</body>
+</html>
